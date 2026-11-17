@@ -121,14 +121,13 @@ nav .btn:hover{text-decoration:none}
 #about{background:var(--green);color:#EAF6F1}
 #about h2{color:#fff}
 #about .lead{color:#CFE8E0}
-.people{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:44px 0}
-.person{border-top:1px solid rgba(255,255,255,.3);padding-top:20px}
-.person h3{color:var(--sky)}
-.person .role{margin:4px 0 12px;color:#fff;font-weight:500}
-.person p{color:#CFE8E0;font-size:.98rem}
+.highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:44px 0}
+.hl{border-top:3px solid var(--sky);padding-top:16px}
+.hl h3{color:var(--sky);font-size:1.15rem;margin-bottom:8px}
+.hl p{color:#CFE8E0;font-size:.97rem;margin:0}
 .values{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
 .values li{padding:8px 18px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:.95rem}
-.timeline{margin:44px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.timeline{margin:44px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .timeline li{border-left:3px solid var(--sky);padding-left:18px}
 .timeline b{font-family:var(--serif);font-weight:400;font-size:1.15rem;color:#fff;display:block}
 .timeline span{font-size:.95rem;color:#CFE8E0}
@@ -152,11 +151,12 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 @media (max-width:860px){
   nav a:not(.btn){display:none}
   section,.brand{padding:62px 0}
-  .brand .wrap,#contact .wrap,.people{grid-template-columns:1fr;gap:32px}
+  .brand .wrap,#contact .wrap{grid-template-columns:1fr;gap:32px}
   .cases,.timeline{grid-template-columns:1fr}
+  .highlights{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
 }
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
+@media (max-width:520px){.steps,.highlights{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){
   .streaks{animation:none}
   html{scroll-behavior:auto}
@@ -170,11 +170,11 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Studio Apotheca home"><span>studio</span><b>apotheca</b></a>
     <nav aria-label="Main">
-      <a href="#brands">Our brands</a>
-      <a href="#work">Our work</a>
+      <a href="#brands">Our Brands</a>
+      <a href="#work">Our Work</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
-      <a class="btn" href="#contact">Start an inquiry</a>
+      <a class="btn" href="#contact">Start an Inquiry</a>
     </nav>
   </div>
 </header>
@@ -189,15 +189,15 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
       <path d="M90 17h120" stroke-width="12"/>
     </svg>
     <h1><span>studio</span>apotheca</h1>
-    <p class="tag">Your creative event partner.</p>
+    <p class="tag">Your Creative Event Partner.</p>
     <p class="sub">Coffee, personalized merchandise and signature fragrances, from one team, for your celebration or corporate event.</p>
-    <a class="btn" href="#contact">Start an inquiry</a>
+    <a class="btn" href="#contact">Start an Inquiry</a>
   </div>
 </section>
 
 <section id="brands" aria-labelledby="brands-h">
   <div class="wrap brand-intro" style="max-width:1040px">
-    <h2 id="brands-h">Every remarkable event tells a story</h2>
+    <h2 id="brands-h">Every Remarkable Event Tells a Story</h2>
     <p class="lead">The smallest details leave the biggest impressions. From the aroma of fresh coffee to personalized keepsakes and handcrafted fragrances, we help you create an experience guests remember long after the celebration. Instead of coordinating several suppliers, you work with one trusted partner through three specialized brands.</p>
     <ul class="chips">
       <li><a href="#kafera">Kaféra</a></li>
@@ -212,16 +212,16 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
   <div class="wrap">
     <div>
       <h2 id="kafera-h">Kaféra</h2>
-      <p class="tagline">Mobile coffee &amp; beverage catering</p>
+      <p class="tagline">Mobile Coffee &amp; Beverage Catering</p>
       <p>Bring the café experience to your venue. Professional baristas serve handcrafted drinks, made from moka pot coffee, at birthdays, weddings, executive meetings, appreciation events and corporate functions.</p>
       <p>Kaféra started in January 2026 after our founder completed TESDA National Certificate II in Barista, and a 50th birthday celebration became its first event.</p>
       <div class="tiers">
-        <div class="tier"><b>50 cups</b><span>Signature beverage selection, professional barista, mobile coffee bar setup.</span></div>
-        <div class="tier"><b>100 and 200 cups</b><span>Expanded beverage selection, longer service, event customization.</span></div>
-        <div class="tier"><b>300 cups and above</b><span>Full beverage menu and premium event customization.</span></div>
+        <div class="tier"><b>50 Cups</b><span>Signature beverage selection, professional barista, mobile coffee bar setup.</span></div>
+        <div class="tier"><b>100 and 200 Cups</b><span>Expanded beverage selection, longer service, event customization.</span></div>
+        <div class="tier"><b>300 Cups and Above</b><span>Full beverage menu and premium event customization.</span></div>
       </div>
       <p class="small">Service coverage includes location, travel arrangements, event requirements and venue preparation. Quoted per event.</p>
-      <a class="btn" href="#contact">Ask for a coffee bar quote</a>
+      <a class="btn" href="#contact">Ask for a Coffee Bar Quote</a>
     </div>
     <ul class="items" aria-label="Kaféra signature drinks">
       <li><strong>Midnight Americano</strong>Smooth and bold. Rich espresso-style moka pot brew diluted with hot water.</li>
@@ -237,17 +237,17 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
   <div class="wrap">
     <div>
       <h2 id="crafts-h">SA Crafts &amp; Prints</h2>
-      <p class="tagline">Personalized merchandise &amp; event keepsakes</p>
+      <p class="tagline">Personalized Merchandise &amp; Event Keepsakes</p>
       <p>Meaningful events deserve meaningful souvenirs. We design and sublimation-print merchandise that celebrates milestones, strengthens brands, and gives guests something to take home. Every item matches your event's identity, colors and message.</p>
       <p class="small">Items are made to order. Styles, colors and sizes depend on current supplier availability. We recommend a lead time of 3 to 4 weeks.</p>
-      <a class="btn" href="#contact">Ask about merchandise</a>
+      <a class="btn" href="#contact">Ask About Merchandise</a>
     </div>
     <div>
       <ul class="items" aria-label="SA Crafts and Prints products">
-        <li><strong>Custom T-shirts and tote bags</strong>Designed around your event or brand.</li>
-        <li><strong>Ceramic mugs and coasters</strong>Everyday keepsakes with your design.</li>
-        <li><strong>Customized gifts and event souvenirs</strong>Pillowcases, slippers and more, made to order.</li>
-        <li><strong>How we work</strong>Consultation, design development, material selection, production, quality checking, final delivery.</li>
+        <li><strong>Custom T-Shirts and Tote Bags</strong>Designed around your event or brand.</li>
+        <li><strong>Ceramic Mugs and Coasters</strong>Everyday keepsakes with your design.</li>
+        <li><strong>Customized Gifts and Event Souvenirs</strong>Pillowcases, slippers and more, made to order.</li>
+        <li><strong>How We Work</strong>Consultation, design development, material selection, production, quality checking, final delivery.</li>
       </ul>
     </div>
   </div>
@@ -258,11 +258,11 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
   <div class="wrap">
     <div>
       <h2 id="anne-h">Anne Émeraude</h2>
-      <p class="tagline">Signature fragrance souvenirs</p>
+      <p class="tagline">Signature Fragrance Souvenirs</p>
       <p>Handcrafted room and linen sprays, designed as elegant event souvenirs, appreciation gifts and premium keepsakes. Each one can carry names, event dates, logos, colors or custom packaging.</p>
       <p>Anne Émeraude began as a personal experiment in making a signature scent. When someone asked for custom perfume souvenirs for an 18th birthday, it became a collection about memories and meaningful occasions.</p>
       <p class="small">Every fragrance is aged for at least two weeks after the materials arrive, so the scent can fully develop. Good for birthday souvenirs, corporate gifts, wedding tokens and personalized gifts, with a choice of bottles and packaging styles.</p>
-      <a class="btn" href="#contact">Ask about fragrances</a>
+      <a class="btn" href="#contact">Ask About Fragrances</a>
     </div>
     <ul class="items" aria-label="Anne Émeraude collections">
       <li><strong>Honey Peach Aura</strong>A warm fruity blend with a sweet honey glow.</li>
@@ -278,37 +278,37 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 
 <section id="for" aria-labelledby="for-h">
   <div class="wrap">
-    <h2 id="for-h">Made for your occasion</h2>
+    <h2 id="for-h">Made for Your Occasion</h2>
     <ul class="tags">
-      <li>Birthdays</li><li>Weddings</li><li>Debuts</li><li>Anniversaries</li><li>Family gatherings</li>
-      <li>Corporate meetings</li><li>Executive events</li><li>Product launches</li><li>Appreciation programs</li>
-      <li>Christmas parties</li><li>School events</li><li>Organization activities</li><li>Campaign gatherings</li>
-      <li>Community celebrations</li><li>Private functions</li>
+      <li>Birthdays</li><li>Weddings</li><li>Debuts</li><li>Anniversaries</li><li>Family Gatherings</li>
+      <li>Corporate Meetings</li><li>Executive Events</li><li>Product Launches</li><li>Appreciation Programs</li>
+      <li>Christmas Parties</li><li>School Events</li><li>Organization Activities</li><li>Campaign Gatherings</li>
+      <li>Community Celebrations</li><li>Private Functions</li>
     </ul>
   </div>
 </section>
 
 <section id="work" aria-labelledby="work-h">
   <div class="wrap">
-    <h2 id="work-h">Featured projects</h2>
+    <h2 id="work-h">Featured Projects</h2>
     <div class="cases">
       <article class="case">
         <small>Kaféra Coffee Bar</small>
-        <h3>A private 50th birthday</h3>
+        <h3>A Private 50th Birthday</h3>
         <p>Handcrafted coffee and signature refreshments created a warm, café-inspired atmosphere for family and friends. From setup to the final cup, we focused on quality drinks and professional service.</p>
-        <a href="https://gqr.sh/hVvQ">Watch the event highlights</a>
+        <a href="https://gqr.sh/hVvQ">Watch the Event Highlights</a>
       </article>
       <article class="case">
         <small>Anne Émeraude Fragrances</small>
-        <h3>An elegant debut</h3>
+        <h3>An Elegant Debut</h3>
         <p>Custom room and linen spray souvenirs made exclusively for the celebrant and guests, with personalized labels and premium presentation.</p>
-        <a href="https://gqr.sh/FXAn">View the project</a>
+        <a href="https://gqr.sh/FXAn">View the Project</a>
       </article>
       <article class="case">
         <small>SA Crafts &amp; Prints</small>
         <h3>Day &amp; Night Café</h3>
         <p>Branded café merchandise and essentials that turn an existing brand identity into useful, good-looking products.</p>
-        <a href="https://gqr.sh/WTge">View the project</a>
+        <a href="https://gqr.sh/WTge">View the Project</a>
       </article>
     </div>
   </div>
@@ -316,15 +316,15 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 
 <section id="process" aria-labelledby="process-h">
   <div class="wrap">
-    <h2 id="process-h">How we work together</h2>
+    <h2 id="process-h">How We Work Together</h2>
     <p class="lead">Seven clear steps, from your first message to the day of your event.</p>
     <ol class="steps">
       <li><h3>Inquiry</h3><p>Share your event details, preferred products or ideas.</p></li>
       <li><h3>Consultation</h3><p>We learn your vision, budget and timeline, recommend options, and send a detailed quotation.</p></li>
       <li><h3>Confirmation</h3><p>A 50% down payment confirms your order. Preparation starts after it is received.</p></li>
       <li><h3>Production</h3><p>Beverage planning, merchandise production, or fragrance preparation and aging.</p></li>
-      <li><h3>Quality check</h3><p>Everything is checked for presentation and function before release.</p></li>
-      <li><h3>Final payment</h3><p>The balance is settled before release, delivery or event service.</p></li>
+      <li><h3>Quality Check</h3><p>Everything is checked for presentation and function before release.</p></li>
+      <li><h3>Final Payment</h3><p>The balance is settled before release, delivery or event service.</p></li>
       <li><h3>Delivery</h3><p>We deliver your order, or bring the experience to your event.</p></li>
     </ol>
     <p class="note">Lead times: merchandise 3 to 4 weeks, fragrances at least 2 weeks of aging after materials arrive. Contact us early for your date.</p>
@@ -333,28 +333,26 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 
 <section id="about" aria-labelledby="about-h">
   <div class="wrap">
-    <h2 id="about-h">The minds behind the brand</h2>
-    <p class="lead">Studio Apotheca is the work of two technology professionals who share a passion for building brands, crafting experiences and turning ideas into meaningful products and services.</p>
-    <div class="people">
-      <div class="person">
-        <h3>Anne Lorraine D. Antonio</h3>
-        <p class="role">Creative Director, Studio Operations &amp; Business Strategy</p>
-        <p>After more than two decades in information technology, Anne turned to creative entrepreneurship. She leads brand strategy, coffee development, fragrance concepts, merchandise design and quality. TESDA NC II Barista certified.</p>
-      </div>
-      <div class="person">
-        <h3>Stephanie Nicole O. Santos</h3>
-        <p class="role">Director of Operations, Finance &amp; Business Development</p>
-        <p>Stephanie handles product development and refinement, finance, logistics, client relations, strategic partnerships and business infrastructure.</p>
-      </div>
+    <h2 id="about-h">Our Story</h2>
+    <p class="lead">Studio Apotheca is a creative lifestyle studio built by people with decades of working experience in the IT industry and a shared passion for building brands, crafting experiences and turning ideas into meaningful products. We believe the smallest details leave the greatest impressions.</p>
+    <div class="highlights">
+      <div class="hl"><h3>From IT to Craft</h3><p>Decades of working in the IT industry, now channeled into creative craft, brand building and thoughtful service.</p></div>
+      <div class="hl"><h3>Certified Barista</h3><p>Kaféra's coffee is prepared by a TESDA National Certificate II Barista holder, using moka pot extraction.</p></div>
+      <div class="hl"><h3>One Trusted Partner</h3><p>Coffee, merchandise and fragrance souvenirs under one team, with a single point of contact for your event.</p></div>
+      <div class="hl"><h3>Made with Care</h3><p>Everything is made to order, from handcrafted drinks to custom prints and fragrances aged for at least two weeks.</p></div>
     </div>
+    <h3 style="margin-bottom:6px;color:#fff">Our Journey</h3>
     <ul class="timeline" aria-label="Our journey">
-      <li><b>November 2024</b><span>SA Crafts &amp; Prints begins with sublimation-printed tote bags and mugs.</span></li>
-      <li><b>2025</b><span>Anne Émeraude grows from a personal signature scent into a fragrance collection.</span></li>
-      <li><b>January 2026</b><span>Kaféra launches after TESDA barista training, then joins the studio.</span></li>
+      <li><b>November 2024</b><span>SA Crafts &amp; Prints begins, turning custom designs into sublimation-printed tote bags and mugs.</span></li>
+      <li><b>2025</b><span>Anne Émeraude grows from a personal signature scent into a fragrance collection for meaningful occasions.</span></li>
+      <li><b>January 2026</b><span>After TESDA barista training, a 50th birthday celebration becomes the first Kaféra event.</span></li>
+      <li><b>2026</b><span>Kaféra joins SA Crafts &amp; Prints and Anne Émeraude as Studio Apotheca.</span></li>
     </ul>
-    <h3 style="margin:48px 0 16px;color:#fff">What we value</h3>
+    <h3 style="margin:48px 0 12px;color:#fff">Our Mission</h3>
+    <p class="lead" style="margin-top:0">To create thoughtfully crafted products and meaningful experiences that combine quality, creativity and purpose, and to support aspiring creatives and artisans along the way.</p>
+    <h3 style="margin:40px 0 16px;color:#fff">What We Value</h3>
     <ul class="values">
-      <li>Craftsmanship</li><li>Quality</li><li>Creativity</li><li>Integrity</li><li>Growth through learning</li><li>Collaboration</li><li>Community empowerment</li><li>Passion with purpose</li>
+      <li>Craftsmanship</li><li>Quality</li><li>Creativity</li><li>Integrity</li><li>Growth Through Learning</li><li>Collaboration</li><li>Community Empowerment</li><li>Passion with Purpose</li>
     </ul>
   </div>
 </section>
@@ -362,15 +360,15 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 <section id="contact" aria-labelledby="contact-h">
   <div class="wrap">
     <div>
-      <h2 id="contact-h">Let's create something memorable together</h2>
+      <h2 id="contact-h">Let's Create Something Memorable Together</h2>
       <p>Tell us about your celebration, corporate gathering or milestone event. We'll recommend the right mix of coffee, merchandise and fragrance souvenirs.</p>
-      <a class="btn" href="https://forms.gle/BSeNSLRdniUrXLGq5">Start an inquiry</a>
+      <a class="btn" href="https://forms.gle/BSeNSLRdniUrXLGq5">Start an Inquiry</a>
     </div>
     <ul class="contact-list">
       <li><b>Email</b><a href="mailto:studioapotheca.ph@gmail.com">studioapotheca.ph@gmail.com</a></li>
       <li><b>Phone or Viber</b><a href="tel:+639088850753">+63 908 8850 753</a></li>
       <li><b>Location</b>Metro Manila, Philippines</li>
-      <li><b>Business hours</b>Monday to Saturday, 9:00 AM to 6:00 PM</li>
+      <li><b>Business Hours</b>Monday to Saturday, 9:00 AM to 6:00 PM</li>
     </ul>
   </div>
 </section>
