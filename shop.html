@@ -6,6 +6,8 @@
 <title>Shop | Studio Apotheca</title>
 <meta name="description" content="Shop coffee beans from Kaféra, 50 ml fragrances from Anne Émeraude, and custom mugs and coasters from SA Crafts & Prints.">
 <meta name="theme-color" content="#10745F">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +25,8 @@ h2{font-size:clamp(1.9rem,4vw,2.6rem)}
 h3{font-size:1.25rem}
 p{margin:0 0 .8em}
 .mark{font-family:var(--sans);letter-spacing:-.02em;white-space:nowrap;color:var(--sky);text-decoration:none;font-size:1.45rem}
-.mark span{font-weight:300}.mark b{font-weight:600}
+.logo-img{display:block;height:28px;width:auto}
+.foot-logo{height:24px;margin:0 auto 10px}
 
 .banner{background:#E8A33D;color:#2B1A14;text-align:center;font-size:.92rem;font-weight:500;padding:8px 16px}
 header{position:sticky;top:0;z-index:10;background:var(--green)}
@@ -115,7 +118,7 @@ dialog::backdrop{background:rgba(6,50,42,.6)}
 .hp{position:absolute;left:-9999px}
 .msg{margin-top:12px;font-weight:500}
 .eta{font-size:.9rem;color:var(--muted);margin:8px 0 0;padding-left:18px}
-@media (max-width:760px){nav a:not(:last-child){display:none}section{padding:56px 0}}
+@media (max-width:760px){.logo-img{height:21px}.foot-logo{height:20px}nav a:not(:last-child){display:none}section{padding:56px 0}}
 </style>
 </head>
 <body>
@@ -124,7 +127,7 @@ dialog::backdrop{background:rgba(6,50,42,.6)}
 
 <header>
   <div class="wrap">
-    <a class="mark" href="index.html" aria-label="Studio Apotheca home"><span>studio</span><b>apotheca</b></a>
+    <a class="mark" href="index.html" aria-label="Studio Apotheca home"><img class="logo-img" src="images/logo.png" alt="Studio Apotheca" width="900" height="105"></a>
     <nav aria-label="Main">
       <a href="#coffee">Coffee Beans</a>
       <a href="#perfume">Perfume</a>
@@ -184,7 +187,7 @@ dialog::backdrop{background:rgba(6,50,42,.6)}
 </main>
 
 <footer>
-  <a class="mark" href="index.html" style="font-size:1.2rem"><span>studio</span><b>apotheca</b></a><br>
+  <a href="index.html" aria-label="Studio Apotheca home"><img class="logo-img foot-logo" src="images/logo.png" alt="Studio Apotheca" width="900" height="105"></a>
   © <span id="yr">2026</span> Studio Apotheca. Questions? <a href="index.html#contact">Contact us</a>.
 </footer>
 
