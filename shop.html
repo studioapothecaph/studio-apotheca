@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- PLACEHOLDER PAGE: remove the next line when the shop is ready to launch -->
-<meta name="robots" content="noindex">
 <title>Shop | Studio Apotheca</title>
 <meta name="description" content="Shop coffee beans from Kaféra, 50 ml fragrances from Anne Émeraude, and custom mugs and coasters from SA Crafts & Prints.">
 <meta name="theme-color" content="#10745F">
@@ -365,6 +363,7 @@ $("co").addEventListener("submit",async function(e){
 })();
 if(CONFIG.endpoint)$("banner").hidden=true;
 $("yr").textContent=new Date().getFullYear();draw();
+if(location.hash==="#cart")$("dlg").showModal();
 </script>
 </body>
 </html>

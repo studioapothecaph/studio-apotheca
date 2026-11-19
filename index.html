@@ -55,6 +55,9 @@ nav{display:flex;gap:22px;align-items:center}
 nav a{color:#E4F3EE;text-decoration:none;font-size:.95rem;font-weight:500}
 nav a:hover{text-decoration:underline;text-underline-offset:5px}
 nav .btn{padding:8px 18px;font-size:.9rem;color:var(--green-deep)}
+nav a.keep{font-weight:600;opacity:1}
+nav a.cartlink{background:var(--sky);color:var(--green-deep);padding:7px 14px;border-radius:999px}
+nav a.cartlink:hover{text-decoration:none;background:#B0D6FF}
 nav .btn:hover{text-decoration:none}
 
 /* hero */
@@ -149,7 +152,8 @@ footer{background:#06322A;color:#9CC3B8;padding:30px 24px;text-align:center;font
 footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
 
 @media (max-width:860px){
-  nav a:not(.btn){display:none}
+  nav a:not(.keep){display:none}
+  nav{gap:14px}
   section,.brand{padding:62px 0}
   .brand .wrap,#contact .wrap{grid-template-columns:1fr;gap:32px}
   .cases,.timeline{grid-template-columns:1fr}
@@ -174,6 +178,8 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
       <a href="#work">Our Work</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
+      <a class="keep" href="shop.html">Shop</a>
+      <a class="cartlink keep" href="shop.html#cart">Cart (<span id="cc">0</span>)</a>
       <a class="btn" href="#contact">Start an Inquiry</a>
     </nav>
   </div>
@@ -380,6 +386,7 @@ footer .mark{font-size:1.2rem;display:block;margin-bottom:6px}
   Coffee · Personalized Merchandise · Signature Fragrances<br>
   © <span id="yr">2026</span> Studio Apotheca
 </footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();
+try{var _c=JSON.parse(localStorage.getItem("sa-cart")||"[]");document.getElementById("cc").textContent=_c.reduce(function(n,i){return n+i.qty},0)}catch(e){}</script>
 </body>
 </html>
